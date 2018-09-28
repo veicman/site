@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return "ngin"
+	return "ngi"
 
 if __name__ == '__main__':
 	app.run()
