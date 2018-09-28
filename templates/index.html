@@ -1,17 +1,12 @@
-<!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>HTML5</title>
-  <!--[if IE]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <style>
-   article, aside, details, figcaption, figure, footer,header,
-   hgroup, menu, nav, section { display: block; }
-  </style>
- </head>
- <body>
-  <p>Привет, мир</p>
- </body>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Добро пожаловать ко мне!</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Привет, {{ user.username }}!</h1>
+    </body>
 </html>
