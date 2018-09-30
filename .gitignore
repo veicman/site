@@ -91,3 +91,5 @@ env/
 
 #Fabric
 fabfile.py
+
+img/
