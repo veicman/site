@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
         images = []
         for filename in os.listdir('static/img'):
-                if filename.endswith(".jpg") and filename != "1.jpg":
+                if filename.endswith(".jpg") and filename != "0001.jpg":
                         images.append(os.path.join('static/img', filename))
                 else:
                         continue
