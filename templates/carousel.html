@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="static/img/0001.jpg" alt="static/img/0001.jpg">
@@ -17,4 +17,21 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div> -->
+
+<div id="gallery">  
+  {% for image in images %}
+    <img alt="{{ image }}"
+         src="static/img/thumbs/{{ image }}"
+         data-image="static/img/big/{{ image }}"
+         data-description="{{ image }}">
+  {% endfor %}
 </div>
+        
+<script>
+  jQuery(document).ready(function(){ 
+    jQuery("#gallery").unitegallery({
+      gallery_theme: "{{ style }}"
+    });
+  });
+</script>
