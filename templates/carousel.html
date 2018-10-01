@@ -18,20 +18,23 @@
     <span class="sr-only">Next</span>
   </a>
 </div> -->
-
-<div id="gallery">  
-  {% for image in images %}
-    <img alt="{{ image }}"
-         src="static/img/thumbs/{{ image }}"
-         data-image="static/img/big/{{ image }}"
-         data-description="{{ image }}">
-  {% endfor %}
-</div>
+<div class="container">
+  <div id="gallery">  
+    {% for image in images %}
+      <img alt="{{ image }}"
+           src="static/img/thumbs/{{ image }}"
+           data-image="static/img/big/{{ image }}"
+           data-description="{{ image }}">
+    {% endfor %}
+  </div>
+          
+  <script>
+    jQuery(document).ready(function(){ 
+      jQuery("#gallery").unitegallery({
+        gallery_theme: "{{ style }}"
         
-<script>
-  jQuery(document).ready(function(){ 
-    jQuery("#gallery").unitegallery({
-      gallery_theme: "{{ style }}"
+        
+      });
     });
-  });
-</script>
+  </script>
+</div>

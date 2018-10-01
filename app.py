@@ -11,7 +11,7 @@ def index():
                         images.append(filename)
                 else:
                         continue
-        return render_template('index.html',images=images,style="compact")
+        return render_template('index.html',images=images,style="tiles")
 
 @app.route('/<style>')
 def style(style):
