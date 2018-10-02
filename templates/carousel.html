@@ -1,10 +1,10 @@
 <div class="container">
   <div id="gallery">  
     {% for image in images %}
-      <img alt="{{ image }}"
+    <img alt="Настя и Леша. Новогодняя фотоссесия."
            src="static/img/thumbs/{{ image }}"
            data-image="static/img/big/{{ image }}"
-           data-description="{{ image }}">
+           data-description="Фотограф Анна Левина. Хабаровск, 2017г.">
     {% endfor %}
   </div>
   <script>
